@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import './App.css';
 import Cards from './components/Cards/Cards.jsx';
 import Nav from './components/Nav/Nav.jsx';
@@ -9,32 +8,15 @@ import Error from './components/Error/Error.jsx';
 import Favorites from './components/Favorites/Favorites.jsx';
 import { useState, useEffect } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-=======
-import "./App.css";
-import Cards from "./components/Cards/Cards.jsx";
-import Nav from "./components/Nav/Nav.jsx";
-import About from "./components/About/About.jsx";
-import Detail from "./components/Detail/Detail.jsx";
-import Form from "./components/Form/Form.jsx";
-import Error from "./components/Error/Error.jsx";
-import Favorites from "./components/Favorites/Favorites.jsx";
-import { useState, useEffect } from "react";
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { login } from "./redux/actions";
->>>>>>> 0f3850301f2b96b45d73babcd65f1119cf56a3b0
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from './redux/actions';
 
 function App() {
   const [characters, setCharacters] = useState([]);
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
-<<<<<<< HEAD
   const username = '@';
   const password = '1';
-=======
-  // const username = "ejemplo@gmail.com";
-  // const password = "1password";
->>>>>>> 0f3850301f2b96b45d73babcd65f1119cf56a3b0
 
   const dispatch = useDispatch();
   const user = useSelector((state) => state.idUser);
@@ -56,13 +38,8 @@ function App() {
   }, [access, navigate]);
 
   function onSearch(character) {
-<<<<<<< HEAD
-    fetch(`https://rickandmortyapi.com/api/character/${character}`)
-      // fetch(`http://localhost:3001/onsearch/${character}`)
-=======
-    //fetch(`https://rickandmortyapi.com/api/character/${character}`)
+    // fetch(`https://rickandmortyapi.com/api/character/${character}`)
     fetch(`http://localhost:3001/onsearch/${character}`)
->>>>>>> 0f3850301f2b96b45d73babcd65f1119cf56a3b0
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {

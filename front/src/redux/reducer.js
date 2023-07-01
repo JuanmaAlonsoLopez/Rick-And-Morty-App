@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, GET_FAVS } from './actions';
-=======
-import { ADD_FAV, REMOVE_FAV, GET_FAVS, FILTER, ORDER } from "./actions";
->>>>>>> 0f3850301f2b96b45d73babcd65f1119cf56a3b0
 
 const initialState = {
   idUser: 0,
@@ -53,11 +49,7 @@ const rootReducer = (state = initialState, action) => {
       //   );
       // }
       let orderFunction =
-<<<<<<< HEAD
         action.payload === 'Ascendente'
-=======
-        action.payload === "Ascendente"
->>>>>>> 0f3850301f2b96b45d73babcd65f1119cf56a3b0
           ? (a, b) => {
               return a.id > b.id ? 1 : -1;
             }
@@ -74,7 +66,7 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         myFavorites: state.allMyFavorites,
       };
-    case "LOGIN":
+    case 'LOGIN':
       return {
         ...state,
         idUser: action.payload,

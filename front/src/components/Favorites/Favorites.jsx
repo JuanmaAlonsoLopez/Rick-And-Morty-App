@@ -1,10 +1,6 @@
 import Card from "../Card/Card";
 import styled from "styled-components";
-<<<<<<< HEAD
 import { connect, useDispatch } from "react-redux";
-=======
-import { connect, useDispatch, useSelector } from "react-redux";
->>>>>>> 0f3850301f2b96b45d73babcd65f1119cf56a3b0
 import { filterCards, orderCards, getFavs } from "../../redux/actions";
 import { useRef } from "react";
 
@@ -28,12 +24,7 @@ export function Favorites({ myFavorites }) {
   const dispatch = useDispatch();
 
   function handleReset(e) {
-<<<<<<< HEAD
     dispatch(getFavs());
-=======
-    // dispatch({ type: "RESET" });
-    dispatch(getFavs(user));
->>>>>>> 0f3850301f2b96b45d73babcd65f1119cf56a3b0
     filter.current.value = "";
     order.current.value = "";
   }
